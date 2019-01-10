@@ -1,0 +1,48 @@
+
+project
+│   bootstrap.py
+│   léeme.txt
+│   requirements.txt
+│   treedirs.txt
+│
+├───────────────────────scripts
+│                           build_database.py
+└───app                     _load_test_data.py
+      │   settings.py       _load_test_processETL.py
+      │   __init__.py       __init__.py
+      │
+      ├──────────────────────────────────────────────────────────core
+      │                                                             etl.py
+      ├─────────────────────────────────controller                  extraction.py
+      │                                        complement.py        integration.py  
+      ├─────────────────────model              extraction.py        mining.py
+      │                        models.py       integration.py       transformation.py
+      ├───ui                   _config.py      mining.py            visualization.py
+      │    │   base.py         __init__.py     process.py           _io.py      
+      │    │   __init__.py                     transformation.py    __init__.py
+      │    │                                   visualization.py
+      │    ├───static                          __init__.py
+      │    │       favicon.png
+      │    │       py.ico
+      │    │       vort_mainDisplay.png
+      │    │
+      │    └───template
+      │           base.ui
+      │             _dossier_etl.html
+      │             _dossier_process.html
+      │
+      └───test
+             │   extraction.py
+             │   integration.py
+             │   mining.py
+             │   transformation.py
+             │   visualization.py
+             │   __init__.py
+             │
+             └───_files
+                     _base.json
+                     _csv.csv
+                     _json.json
+                     _tsv.tsv
+                     _xls.xls
+                     _xlsx.xlsx

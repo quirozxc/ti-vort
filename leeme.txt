@@ -1,0 +1,35 @@
+ETL - Visualization of Object-Relational Transformed
+TEG - Facultad Experimental de Ciencias _-LUZ-_
+
+Primeros pasos para el uso de la aplicación
+
+   1.- Instalar dependendias (requirements.txt).
+     Ex: pip install -r requirements.txt
+
+   2.- Crear la base de datos en su SGBD, el mismo
+     puede ser: PostgreSQL, Oracle, MySQL, MSSQL, Firebird, SQLite...
+
+   3.- Editar APP_DATABASE_URL en 'settings.py' situado en .\app.
+     (más información en el mismo archivo)
+
+   ------------------------------------------------------------------
+   Después de haber creado la base de datos y configurado
+   la URL para la correcta comunicación con la aplicación...
+
+   *** Ejecutar desde su terminal el archivo bootstrap.py ***
+   *** a través del mismo podra seguir los siguientes pasos ***
+   ------------------------------------------------------------------
+
+   4.- Seleccionar la opción "--build_database".
+     Ex: python .\bootstrap.py --build_database
+
+   5.- Iniciar la aplicación con la selección "--run".
+     Ex: python .\bootstrap.py --run
+
+Opcional:
+   Después de los pasos 1-4 puede seleccionar el resto de
+   parámetros disponibles desde bootstrap.py para ejecutar
+   el demo inicial o los unittest. Es necesaria la creación
+   de una base de datos para el demo, así como la configuración
+   de APP_TEST_DATABASE_URL dentro del archivo settings.py.
+
