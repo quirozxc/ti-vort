@@ -1,0 +1,3508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>vort_mainWindow</class>
+ <widget class="QMainWindow" name="vort_mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>555</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>733</width>
+    <height>555</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>733</width>
+    <height>555</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">ETL - Visualization of Object-Relational Transformed</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">selection-background-color: rgb(255, 85, 0);</string>
+  </property>
+  <widget class="QWidget" name="vort_centralWidget">
+   <widget class="QGroupBox" name="process_groupBox">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>308</width>
+      <height>522</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string notr="true"/>
+    </property>
+    <widget class="QTabWidget" name="process_db_tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>151</y>
+       <width>300</width>
+       <height>166</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="process_dbExtraction_tab">
+      <attribute name="title">
+       <string notr="true">Extracción</string>
+      </attribute>
+      <widget class="QLabel" name="process_dbExtraction_loadSample_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>5</y>
+         <width>150</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Cargar un ejemplo de conexión</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="process_dbExtraction_sampleSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>159</x>
+         <y>5</y>
+         <width>130</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="process_dbExtraction_line_2">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>52</y>
+         <width>284</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="process_dbExtraction_sqlite3_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>100</y>
+         <width>46</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">SQLite3</string>
+       </property>
+      </widget>
+      <widget class="Line" name="process_dbExtraction_line_3">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>111</y>
+         <width>246</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="process_dbExtraction_sqlite3File_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>116</y>
+         <width>207</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>48</number>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Dirección del archivo...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="process_dbExtraction_sqlite3Explore_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>215</x>
+         <y>115</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Explorar</string>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="process_dbExtraction_url_plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>57</y>
+         <width>284</width>
+         <height>43</height>
+        </rect>
+       </property>
+       <property name="plainText">
+        <string notr="true"/>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">URL de conexión...</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="process_dbExtraction_connectionSaved_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>30</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Conexiones Guardadas</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="process_dbExtraction_connectionSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>138</x>
+         <y>30</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="process_dbExtraction_connectionSaved_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="process_dbExtraction_line_1">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>23</y>
+         <width>150</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="process_dbInsertion_tab">
+      <attribute name="title">
+       <string notr="true">Inserción</string>
+      </attribute>
+      <widget class="QPushButton" name="process_dbInsertion_sqlite3Explore_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>215</x>
+         <y>115</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Explorar</string>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="process_dbInsertion_url_plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>57</y>
+         <width>284</width>
+         <height>43</height>
+        </rect>
+       </property>
+       <property name="plainText">
+        <string notr="true"/>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">URL de conexión...</string>
+       </property>
+      </widget>
+      <widget class="Line" name="process_dbInsertion_line_2">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>52</y>
+         <width>284</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="process_dbInsertion_sqlite3File_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>116</y>
+         <width>207</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>64</number>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Dirección del archivo...</string>
+       </property>
+      </widget>
+      <widget class="Line" name="process_dbInsertion_line_3">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>111</y>
+         <width>246</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="process_dbInsertion_sqlite3_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>100</y>
+         <width>46</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">SQLite3</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="process_dbInsertion_loadSample_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>5</y>
+         <width>150</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Cargar un ejemplo de conexión</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="process_dbInsertion_connectionSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>138</x>
+         <y>30</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="process_dbInsertion_connectionSaved_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="process_dbInsertion_line_1">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>23</y>
+         <width>150</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="process_dbInsertion_connectionSaved_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>30</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Conexiones Guardadas</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="process_dbInsertion_sampleSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>159</x>
+         <y>5</y>
+         <width>130</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QTabWidget" name="process_sql_tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>320</y>
+       <width>300</width>
+       <height>172</height>
+      </rect>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="process_sqlSelect_tab">
+      <attribute name="title">
+       <string notr="true">Select</string>
+      </attribute>
+      <widget class="QPlainTextEdit" name="process_sqlSelect_selectQuery_plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>42</y>
+         <width>284</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="plainText">
+        <string notr="true"/>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Sentencia en SQL para extracción de datos...</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="process_sqlSelect_queriesSaved_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>0</y>
+         <width>95</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Queries Guardados</string>
+       </property>
+      </widget>
+      <widget class="Line" name="process_sqlSelect_line_1">
+       <property name="geometry">
+        <rect>
+         <x>98</x>
+         <y>11</y>
+         <width>191</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="process_sqlSelect_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>16</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="process_sqlSelect_querySelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>15</y>
+         <width>266</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="process_sqlSelect_line_2">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>37</y>
+         <width>284</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="process_sqlUpdate_tab">
+      <attribute name="title">
+       <string notr="true">Update</string>
+      </attribute>
+      <widget class="QLabel" name="process_sqlUpdate_queriesSaved_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>0</y>
+         <width>95</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Queries Guardados</string>
+       </property>
+      </widget>
+      <widget class="Line" name="process_sqlUpdate_line_1">
+       <property name="geometry">
+        <rect>
+         <x>98</x>
+         <y>11</y>
+         <width>191</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="process_sqlUpdate_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>16</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="process_sqlUpdate_updateQuery_plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>42</y>
+         <width>284</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="plainText">
+        <string notr="true"/>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Sentencia en SQL para actualización de datos...</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="process_sqlUpdate_querySelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>15</y>
+         <width>266</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="process_sqlUpdate_line_2">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>37</y>
+         <width>284</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="process_sqlInsert_tab">
+      <attribute name="title">
+       <string notr="true">Insert</string>
+      </attribute>
+      <widget class="QLabel" name="process_sqlInsert_queriesSaved_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>0</y>
+         <width>95</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Queries Guardados</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="process_sqlInsert_querySelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>15</y>
+         <width>266</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="process_sqlInsert_line_2">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>37</y>
+         <width>284</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="process_sqlInsert_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>16</y>
+         <width>20</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="process_sqlInsert_insertQuery_plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>42</y>
+         <width>284</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="plainText">
+        <string notr="true"/>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Sentencia en SQL para inserción de datos...</string>
+       </property>
+      </widget>
+      <widget class="Line" name="process_sqlInsert_line_1">
+       <property name="geometry">
+        <rect>
+         <x>98</x>
+         <y>11</y>
+         <width>191</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QComboBox" name="process_processSelection_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>15</y>
+       <width>191</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentText">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="process_etlDescription_plainTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>88</y>
+       <width>298</width>
+       <height>59</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string notr="true"/>
+     </property>
+     <property name="placeholderText">
+      <string notr="true">Descripción de ETL...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_processExecute_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>204</x>
+       <y>14</y>
+       <width>100</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Ejecutar Proceso</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="process_processSaved_label">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>0</y>
+       <width>100</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Procesos Guardados</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="process_etlSelection_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>166</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentText">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="Line" name="process_line_1">
+     <property name="geometry">
+      <rect>
+       <x>199</x>
+       <y>15</y>
+       <width>4</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_etlExecute_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>204</x>
+       <y>39</y>
+       <width>100</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Ejecutar ETL</string>
+     </property>
+    </widget>
+    <widget class="Line" name="process_line_2">
+     <property name="geometry">
+      <rect>
+       <x>199</x>
+       <y>40</y>
+       <width>4</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="process_etl_label">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>38</y>
+       <width>25</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">ETLs</string>
+     </property>
+    </widget>
+    <widget class="Line" name="process_line_3">
+     <property name="geometry">
+      <rect>
+       <x>104</x>
+       <y>11</y>
+       <width>92</width>
+       <height>4</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="process_priority_spinBox">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>146</y>
+       <width>33</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="process_priority_label">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>146</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="text">
+      <string notr="true">Prioridad</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_clear_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>119</x>
+       <y>495</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Limpiar</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_saveChanges_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>204</x>
+       <y>495</y>
+       <width>100</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Guardar Cambios</string>
+     </property>
+    </widget>
+    <widget class="Line" name="process_line_4">
+     <property name="geometry">
+      <rect>
+       <x>197</x>
+       <y>496</y>
+       <width>4</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="process_dispatch_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>495</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Expedir</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="process_etlLastRun_dateEdit">
+     <property name="geometry">
+      <rect>
+       <x>223</x>
+       <y>64</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="process_etlLastRun_label">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>63</y>
+       <width>206</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Fecha de inicio para extracción de los ETLs</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="display_groupBox">
+    <property name="geometry">
+     <rect>
+      <x>318</x>
+      <y>5</y>
+      <width>410</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="util_tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>318</x>
+      <y>309</y>
+      <width>310</width>
+      <height>218</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="util_extraction_tab">
+     <attribute name="title">
+      <string notr="true">Extracción</string>
+     </attribute>
+     <widget class="QGroupBox" name="util_extraction_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>295</width>
+        <height>184</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string notr="true"/>
+      </property>
+      <widget class="QTabWidget" name="util_extraction_tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>28</y>
+         <width>287</width>
+         <height>146</height>
+        </rect>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="util_extraction_sqlSelect_tab">
+        <attribute name="title">
+         <string notr="true">Select</string>
+        </attribute>
+        <widget class="QPlainTextEdit" name="util_extraction_sqlSelect_selectQuery_plainTextEdit">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>30</y>
+           <width>271</width>
+           <height>87</height>
+          </rect>
+         </property>
+         <property name="plainText">
+          <string notr="true"/>
+         </property>
+         <property name="placeholderText">
+          <string notr="true">Sentencia en SQL para extracción de datos...</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_extraction_sqlSelect_querySelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>5</y>
+           <width>176</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_extraction_sqlSelect_queriesSaved_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>5</y>
+           <width>95</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Queries Guardadas</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="util_extraction_clear_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>131</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Limpiar</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_extraction_line_1">
+       <property name="geometry">
+        <rect>
+         <x>209</x>
+         <y>158</y>
+         <width>4</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_extraction_execute_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>216</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Ejecutar</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_extraction_connectionSaved_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>5</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Conexiones Guardadas</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="util_extraction_connectionSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>5</y>
+         <width>170</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="util_transf_tab">
+     <attribute name="title">
+      <string notr="true">Transformación</string>
+     </attribute>
+     <widget class="QGroupBox" name="util_transfTools_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>295</width>
+        <height>184</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string notr="true"> Caja de Herramientas</string>
+      </property>
+      <widget class="QGroupBox" name="util_transfTools_order_groupBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>112</y>
+         <width>158</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string notr="true"> Orden</string>
+       </property>
+       <widget class="QRadioButton" name="util_transfTools_orderDown_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>52</x>
+          <y>16</y>
+          <width>50</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Down</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="util_transfTools_orderRight_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>106</x>
+          <y>16</y>
+          <width>50</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Right</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="util_transfTools_orderLeft_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>16</y>
+          <width>43</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Left</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QComboBox" name="util_transfTools_columnSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>51</y>
+         <width>105</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_transfTools_column_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>36</y>
+         <width>40</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Columna</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_transfTools_line_1">
+       <property name="geometry">
+        <rect>
+         <x>47</x>
+         <y>47</y>
+         <width>63</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="util_transfTools_toolSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>16</y>
+         <width>105</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="util_transfTools_line_2">
+       <property name="geometry">
+        <rect>
+         <x>113</x>
+         <y>16</y>
+         <width>4</width>
+         <height>85</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="util_transfTools_format_groupBox">
+       <property name="geometry">
+        <rect>
+         <x>168</x>
+         <y>112</y>
+         <width>122</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string notr="true"> Formato</string>
+       </property>
+       <widget class="QRadioButton" name="util_transfTools_formatDecimal_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>16</y>
+          <width>60</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Decimal</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="util_transfTools_formatText_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>68</x>
+          <y>16</y>
+          <width>50</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Texto</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="util_transfTools_apply_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>216</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Aplicar</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="util_transfTools_values_groupBox">
+       <property name="geometry">
+        <rect>
+         <x>199</x>
+         <y>10</y>
+         <width>91</width>
+         <height>65</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string notr="true"> Valores</string>
+       </property>
+       <widget class="QLineEdit" name="util_transfTools_valuesExistent_lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>15</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="maxLength">
+         <number>32</number>
+        </property>
+        <property name="placeholderText">
+         <string notr="true">Existente</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="util_transfTools_valuesReplacement_lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>40</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="maxLength">
+         <number>32</number>
+        </property>
+        <property name="placeholderText">
+         <string notr="true">Reemplazo</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="Line" name="util_transfTools_line_3">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>75</y>
+         <width>105</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="util_transfTools_columnName_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>82</y>
+         <width>105</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>32</number>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Nuevo nombre</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_transfTools_line_4">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>108</y>
+         <width>285</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_transfTools_position_label">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>82</y>
+         <width>46</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string notr="true">Posición</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="util_transfTools_position_spinBox">
+       <property name="geometry">
+        <rect>
+         <x>165</x>
+         <y>82</y>
+         <width>33</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_transfTools_decimals_label">
+       <property name="geometry">
+        <rect>
+         <x>203</x>
+         <y>82</y>
+         <width>55</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string notr="true">Decimales</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="util_transfTools_decimals_spinBox">
+       <property name="geometry">
+        <rect>
+         <x>257</x>
+         <y>82</y>
+         <width>33</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="util_transfTools_index_groupBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>10</y>
+         <width>74</width>
+         <height>65</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string notr="true"> Índice</string>
+       </property>
+       <widget class="QLabel" name="util_transfTools_indexStart_label">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>15</y>
+          <width>32</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string notr="true">Inicio</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="util_transfTools_indexStep_label">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>40</y>
+          <width>32</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string notr="true">Salto</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="util_transfTools_indexStart_spinBox">
+        <property name="geometry">
+         <rect>
+          <x>36</x>
+          <y>15</y>
+          <width>33</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-99</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="util_transfTools_indexStep_spinBox">
+        <property name="geometry">
+         <rect>
+          <x>36</x>
+          <y>40</y>
+          <width>33</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-99</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="util_transfTools_clear_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>131</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Limpiar</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_transfTools_line_5">
+       <property name="geometry">
+        <rect>
+         <x>209</x>
+         <y>158</y>
+         <width>4</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="util_visual_tab">
+     <attribute name="title">
+      <string notr="true">Visualización</string>
+     </attribute>
+     <widget class="QGroupBox" name="util_visualDesing_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>295</width>
+        <height>184</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string notr="true"> Diseño</string>
+      </property>
+      <widget class="QComboBox" name="util_visualDesing_plotSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>27</y>
+         <width>125</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_visualDesing_apply_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>216</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Aplicar</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="util_visualDesing_include_groupBox">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>10</y>
+         <width>155</width>
+         <height>144</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string notr="true"> Incluir</string>
+       </property>
+       <widget class="QRadioButton" name="util_visualDesing_includePoints_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>77</y>
+          <width>60</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Puntos</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="util_visualDesing_includeGrid_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>97</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Cuadrícula</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="util_visualDesing_includeLegend_radioButton">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>117</y>
+          <width>60</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Leyenda</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="Line" name="util_visualDesing_include_line_1">
+        <property name="geometry">
+         <rect>
+          <x>51</x>
+          <y>23</y>
+          <width>99</width>
+          <height>4</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="util_visualDesing_includeLabels_label">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>12</y>
+          <width>45</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true">Etiquetas</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="util_visualDesing_includeX_lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>27</y>
+          <width>125</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="maxLength">
+         <number>32</number>
+        </property>
+        <property name="placeholderText">
+         <string notr="true">Descripción para X</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="util_visualDesing_includeY_lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>52</y>
+          <width>125</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="maxLength">
+         <number>32</number>
+        </property>
+        <property name="placeholderText">
+         <string notr="true">Descripción para Y</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="util_visualDesing_includeX_label">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>29</y>
+          <width>13</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;X&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="util_visualDesing_includeY_label">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>54</y>
+          <width>13</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="util_visualDesing_plot_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>12</y>
+         <width>35</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Gráfico</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="util_visualDesing_stacked_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>125</y>
+         <width>120</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Comparar (Stacked)</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_visualDesing_line_1">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>23</y>
+         <width>90</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_visualDesing_colors_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>47</y>
+         <width>40</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Colores</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="util_visualDesing_colorsSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>62</y>
+         <width>125</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="Line" name="util_visualDesing_line_2">
+       <property name="geometry">
+        <rect>
+         <x>42</x>
+         <y>58</y>
+         <width>88</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="util_visualDesing_contrast_horizontalSlider">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>97</y>
+         <width>125</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>10</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>5</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_visualDesing_contrast_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>82</y>
+         <width>50</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Contraste</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_visualDesing_line_3">
+       <property name="geometry">
+        <rect>
+         <x>54</x>
+         <y>93</y>
+         <width>76</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_visualDesing_clear_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>51</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Limpiar</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_visualDesing_export_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>136</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Exportar</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_visualDesing_line_4">
+       <property name="geometry">
+        <rect>
+         <x>129</x>
+         <y>158</y>
+         <width>4</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="util_mining_tab">
+     <attribute name="title">
+      <string notr="true">Minería</string>
+     </attribute>
+     <widget class="QGroupBox" name="util_algorithms_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>295</width>
+        <height>184</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string notr="true"> Algoritmos</string>
+      </property>
+      <widget class="QTabWidget" name="util_mining_tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>15</y>
+         <width>287</width>
+         <height>164</height>
+        </rect>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="util_regression_tab">
+        <attribute name="title">
+         <string notr="true">Regresión</string>
+        </attribute>
+        <widget class="Line" name="util_regression_line_1">
+         <property name="geometry">
+          <rect>
+           <x>196</x>
+           <y>115</y>
+           <width>4</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="util_regression_clear_pushButton">
+         <property name="geometry">
+          <rect>
+           <x>118</x>
+           <y>114</y>
+           <width>75</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Limpiar</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="util_regression_analyze_pushButton">
+         <property name="geometry">
+          <rect>
+           <x>203</x>
+           <y>114</y>
+           <width>75</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Analizar</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_regression_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>2</y>
+           <width>80</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Regresión Lineal</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_regression_Y_label">
+         <property name="geometry">
+          <rect>
+           <x>7</x>
+           <y>62</y>
+           <width>13</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_regression_columns_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>45</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Columnas</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_regression_X_label">
+         <property name="geometry">
+          <rect>
+           <x>7</x>
+           <y>37</y>
+           <width>13</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;X&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="Line" name="util_regression_line_2">
+         <property name="geometry">
+          <rect>
+           <x>52</x>
+           <y>31</y>
+           <width>99</width>
+           <height>4</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_regression_columnXSelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>35</y>
+           <width>126</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_regression_columnYSelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>60</y>
+           <width>126</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="util_regression_colors_groupBox">
+         <property name="geometry">
+          <rect>
+           <x>156</x>
+           <y>10</y>
+           <width>121</width>
+           <height>86</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string notr="true"> Colores</string>
+         </property>
+         <widget class="Line" name="util_regression_colors_line_1">
+          <property name="geometry">
+           <rect>
+            <x>39</x>
+            <y>21</y>
+            <width>77</width>
+            <height>4</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="util_regression_colorsPoint_label">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>10</y>
+            <width>35</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string notr="true">Puntos</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="util_regression_colorsPointSelection_comboBox">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>25</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="Line" name="util_regression_colors_line_2">
+          <property name="geometry">
+           <rect>
+            <x>34</x>
+            <y>56</y>
+            <width>82</width>
+            <height>4</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="util_regression_colorsStraightLineSelection_comboBox">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>60</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="util_regression_colorsStraightLine_label">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>45</y>
+            <width>30</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string notr="true">Recta</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="Line" name="util_regression_line_3">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>83</y>
+           <width>146</width>
+           <height>4</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="util_regression_includeMetrics_checkBox">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>114</y>
+           <width>90</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Incluir Métricas</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="util_classification_tab">
+        <attribute name="title">
+         <string notr="true">Clasificación</string>
+        </attribute>
+        <widget class="Line" name="util_classification_line_1">
+         <property name="geometry">
+          <rect>
+           <x>196</x>
+           <y>115</y>
+           <width>4</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="util_classification_clear_pushButton">
+         <property name="geometry">
+          <rect>
+           <x>118</x>
+           <y>114</y>
+           <width>75</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Limpiar</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="util_classification_analyze_pushButton">
+         <property name="geometry">
+          <rect>
+           <x>203</x>
+           <y>114</y>
+           <width>75</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Analizar</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="util_classification_includeMetrics_checkBox">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>114</y>
+           <width>90</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Incluir Métricas</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_classification_X_label">
+         <property name="geometry">
+          <rect>
+           <x>7</x>
+           <y>37</y>
+           <width>13</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;X&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_classification_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>2</y>
+           <width>120</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Support Vector Machines</string>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="util_classification_colors_groupBox">
+         <property name="geometry">
+          <rect>
+           <x>141</x>
+           <y>10</y>
+           <width>136</width>
+           <height>86</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string notr="true"> Colores</string>
+         </property>
+         <widget class="Line" name="util_classification_colors_line_2">
+          <property name="geometry">
+           <rect>
+            <x>35</x>
+            <y>56</y>
+            <width>30</width>
+            <height>4</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="util_classification_colorsInlier_label">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>45</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string notr="true">Inliers</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="util_classification_colorsContourSelection_comboBox">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>25</y>
+            <width>126</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="Line" name="util_classification_colors_line_3">
+          <property name="geometry">
+           <rect>
+            <x>108</x>
+            <y>56</y>
+            <width>22</width>
+            <height>4</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="util_classification_colorsInlierSelection_comboBox">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>60</y>
+            <width>60</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="util_classification_colorsOutlier_label">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>45</y>
+            <width>37</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string notr="true">Outliers</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="util_classification_colorsOutlierSelection_comboBox">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>60</y>
+            <width>60</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="Line" name="util_classification_colors_line_1">
+          <property name="geometry">
+           <rect>
+            <x>51</x>
+            <y>21</y>
+            <width>80</width>
+            <height>4</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="util_classification_colorsContour_label">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>10</y>
+            <width>60</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string notr="true">Contorno</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QComboBox" name="util_classification_columnXSelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>35</y>
+           <width>111</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_classification_columnYSelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>60</y>
+           <width>111</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_classification_Y_label">
+         <property name="geometry">
+          <rect>
+           <x>7</x>
+           <y>62</y>
+           <width>13</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="Line" name="util_classification_line_2">
+         <property name="geometry">
+          <rect>
+           <x>52</x>
+           <y>31</y>
+           <width>84</width>
+           <height>4</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="Line" name="util_classification_line_3">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>83</y>
+           <width>131</width>
+           <height>4</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_classification_columns_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>45</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Columnas</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_classification_gamma_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>85</y>
+           <width>37</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Gamma</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="util_classification_gamma_horizontalSlider">
+         <property name="geometry">
+          <rect>
+           <x>44</x>
+           <y>88</y>
+           <width>92</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+         <property name="pageStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::TicksBelow</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="util_clustering_tab">
+        <attribute name="title">
+         <string notr="true">Agrupamiento</string>
+        </attribute>
+        <widget class="Line" name="util_clustering_line_1">
+         <property name="geometry">
+          <rect>
+           <x>196</x>
+           <y>115</y>
+           <width>4</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="util_clustering_clear_pushButton">
+         <property name="geometry">
+          <rect>
+           <x>118</x>
+           <y>114</y>
+           <width>75</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Limpiar</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="util_clustering_analyze_pushButton">
+         <property name="geometry">
+          <rect>
+           <x>203</x>
+           <y>114</y>
+           <width>75</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Analizar</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_clustering_nClusters_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>89</y>
+           <width>57</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string notr="true">Nº Grupos</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_clustering_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>2</y>
+           <width>42</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">K-Means</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_clustering_X_label">
+         <property name="geometry">
+          <rect>
+           <x>7</x>
+           <y>37</y>
+           <width>13</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;X&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_clustering_columnYSelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>60</y>
+           <width>126</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="Line" name="util_clustering_line_2">
+         <property name="geometry">
+          <rect>
+           <x>52</x>
+           <y>31</y>
+           <width>99</width>
+           <height>4</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="util_clustering_includeMetrics_checkBox">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>114</y>
+           <width>90</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Incluir Métricas</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="Line" name="util_clustering_line_3">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>83</y>
+           <width>146</width>
+           <height>4</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_clustering_Y_label">
+         <property name="geometry">
+          <rect>
+           <x>7</x>
+           <y>62</y>
+           <width>13</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="util_clustering_nClusters_spinBox">
+         <property name="geometry">
+          <rect>
+           <x>61</x>
+           <y>89</y>
+           <width>33</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <number>99</number>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_clustering_columnXSelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>35</y>
+           <width>126</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="util_clustering_colors_groupBox">
+         <property name="geometry">
+          <rect>
+           <x>156</x>
+           <y>10</y>
+           <width>121</width>
+           <height>86</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string notr="true"> Colores</string>
+         </property>
+         <widget class="Line" name="util_clustering_colors_line_1">
+          <property name="geometry">
+           <rect>
+            <x>44</x>
+            <y>56</y>
+            <width>72</width>
+            <height>4</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="util_clustering_colorsCenter_label">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>45</y>
+            <width>40</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string notr="true">Centros</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="util_clustering_colorsClusterSelection_comboBox">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>25</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="util_clustering_colorsCenterSelection_comboBox">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>60</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="currentText">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="Line" name="util_clustering_colors_line_2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>21</y>
+            <width>76</width>
+            <height>4</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="util_clustering_colorsCluster_label">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>10</y>
+            <width>37</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string notr="true">Grupos</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QLabel" name="util_clustering_columns_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>45</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Columnas</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="util_integration_tab">
+     <attribute name="title">
+      <string notr="true">Integración</string>
+     </attribute>
+     <widget class="QGroupBox" name="util_integration_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>295</width>
+        <height>184</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string notr="true"/>
+      </property>
+      <widget class="QLabel" name="util_integration_connectionSaved_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>5</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Conexiones Guardadas</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="util_integration_connectionSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>5</y>
+         <width>170</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="util_integration_tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>28</y>
+         <width>287</width>
+         <height>146</height>
+        </rect>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="util_integration_sqlUpdate_tab">
+        <attribute name="title">
+         <string notr="true">Update</string>
+        </attribute>
+        <widget class="QPlainTextEdit" name="util_integration_sqlUpdate_updateQuery_plainTextEdit">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>30</y>
+           <width>271</width>
+           <height>87</height>
+          </rect>
+         </property>
+         <property name="plainText">
+          <string notr="true"/>
+         </property>
+         <property name="placeholderText">
+          <string notr="true">Sentencia en SQL para actualización de datos...</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="util_integration_sqlUpdate_queriesSaved_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>5</y>
+           <width>95</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Queries Guardadas</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_integration_sqlUpdate_querySelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>5</y>
+           <width>176</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="util_integration_sqlInsert_tab">
+        <attribute name="title">
+         <string notr="true">Insert</string>
+        </attribute>
+        <widget class="QLabel" name="util_integration_sqlInsert_queriesSaved_label">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>5</y>
+           <width>95</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true">Queries Guardadas</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="util_integration_sqlInsert_insertQuery_plainTextEdit">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>30</y>
+           <width>271</width>
+           <height>87</height>
+          </rect>
+         </property>
+         <property name="plainText">
+          <string notr="true"/>
+         </property>
+         <property name="placeholderText">
+          <string notr="true">Sentencia en SQL para inserción de datos...</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="util_integration_sqlInsert_querySelection_comboBox">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>5</y>
+           <width>176</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="currentText">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="util_integration_clear_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>131</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Limpiar</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_integration_line_1">
+       <property name="geometry">
+        <rect>
+         <x>209</x>
+         <y>158</y>
+         <width>4</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_integration_execute_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>216</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Ejecutar</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="util_setting_tab">
+     <attribute name="title">
+      <string notr="true">Configuración</string>
+     </attribute>
+     <widget class="QGroupBox" name="util_setting_new_groupBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>295</width>
+        <height>184</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string notr="true"> Nuevo</string>
+      </property>
+      <widget class="QLabel" name="util_setting_newProcess_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>12</y>
+         <width>40</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Proceso</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_setting_new_line_2">
+       <property name="geometry">
+        <rect>
+         <x>44</x>
+         <y>23</y>
+         <width>167</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_setting_new_create_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>216</x>
+         <y>26</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Crear</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="util_setting_newProcessName_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>27</y>
+         <width>206</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>64</number>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Nombre del proceso</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_setting_newETL_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>50</y>
+         <width>20</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">ETL</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_setting_new_line_3">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>61</y>
+         <width>267</width>
+         <height>4</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="util_setting_newProcessSelection_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>46</x>
+         <y>65</y>
+         <width>130</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_setting_newETLProcess_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>63</y>
+         <width>40</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Proceso</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_setting_new_line_1">
+       <property name="geometry">
+        <rect>
+         <x>179</x>
+         <y>65</y>
+         <width>4</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="util_setting_newETLName_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>185</x>
+         <y>65</y>
+         <width>105</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+       <property name="maxLength">
+        <number>64</number>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Nombre de ETL</string>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="util_setting_newETLDescription_plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>90</y>
+         <width>285</width>
+         <height>62</height>
+        </rect>
+       </property>
+       <property name="plainText">
+        <string notr="true"/>
+       </property>
+       <property name="placeholderText">
+        <string notr="true">Descripción del nuevo ETL...</string>
+       </property>
+      </widget>
+      <widget class="Line" name="util_setting_new_line_4">
+       <property name="geometry">
+        <rect>
+         <x>209</x>
+         <y>158</y>
+         <width>4</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_setting_new_apply_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>216</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Aplicar</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="util_setting_new_clear_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>131</x>
+         <y>157</y>
+         <width>75</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string notr="true">Limpiar</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="util_setting_newPriority_spinBox">
+       <property name="geometry">
+        <rect>
+         <x>55</x>
+         <y>151</y>
+         <width>33</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="util_setting_newPriority_label">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>151</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string notr="true">Prioridad</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="options_groupBox">
+    <property name="geometry">
+     <rect>
+      <x>631</x>
+      <y>303</y>
+      <width>97</width>
+      <height>224</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string notr="true"> Opciones</string>
+    </property>
+    <widget class="Line" name="options_line_1">
+     <property name="geometry">
+      <rect>
+       <x>34</x>
+       <y>86</y>
+       <width>51</width>
+       <height>4</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="options_data_label">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>75</y>
+       <width>30</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Datos</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="options_undo_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>114</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Deshacer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="options_copy_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>139</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Copiar</string>
+     </property>
+    </widget>
+    <widget class="Line" name="options_line_2">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>190</y>
+       <width>74</width>
+       <height>4</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="options_clear_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>164</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Limpiar</string>
+     </property>
+    </widget>
+    <widget class="Line" name="options_line_3">
+     <property name="geometry">
+      <rect>
+       <x>47</x>
+       <y>26</y>
+       <width>39</width>
+       <height>4</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="options_file_label">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>15</y>
+       <width>42</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Archivos</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="options_import_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>29</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Importar</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="options_about_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>197</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Acerca de ...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="options_print_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>89</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Mostrar</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="options_export_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>54</y>
+       <width>75</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string notr="true">Exportar</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="vort_centralWidget_status_label">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>531</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="text">
+     <string notr="true">Estado</string>
+    </property>
+    <property name="indent">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vort_centralWidget_currentStatus_label">
+    <property name="geometry">
+     <rect>
+      <x>51</x>
+      <y>531</y>
+      <width>487</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="text">
+     <string notr="true"/>
+    </property>
+    <property name="indent">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vort_centralWidget_signature_label">
+    <property name="geometry">
+     <rect>
+      <x>537</x>
+      <y>531</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="text">
+     <string notr="true">VORT_TI - FEC_Universidad del Zulia</string>
+    </property>
+    <property name="indent">
+     <number>7</number>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
